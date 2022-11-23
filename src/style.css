@@ -66,3 +66,22 @@ main {
 .add-btn {
   align-self: flex-end;
 }
+
+@keyframes change-color {
+  0% {
+    color: #000;
+  }
+
+  100% {
+    color: #fff;
+  }
+}
+
+p {
+  animation-name: change-color;
+  animation-duration: 3s;
+  font-size: 9px;
+  font-weight: 600;
+  color: transparent;
+  text-align: center;
+}

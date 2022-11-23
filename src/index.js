@@ -3,27 +3,11 @@ import './style.css';
 const apiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games';
 const addButton = document.querySelector('.add-btn');
 const refreshButton = document.querySelector('.refresh-btn');
-const apiId = 'F1rXFC85VxYWBl3zqCH3';
+const apiId = 'n05hmXlj4HMt8U3VZc84';
 const table = document.querySelector('.table');
-const lorem = document.querySelector('.lorem');
-
-const postInfo = async (user, score) => {
-  await fetch(`${apiUrl}/:${apiId}/scores/`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      user,
-      score,
-    }),
-  })
-    .then((response) => response.json())
-    .then((json) => { lorem.innerHTML = json.result; });
-};
+const resultCont = document.querySelector('.result-cont');
 
 const displayInfo = (info) => {
-  console.log(info.result);
   table.innerHTML = '';
   info.result.forEach((e) => {
     table.innerHTML += `<tr><td>${e.user}: ${e.score}</td></tr>`;
@@ -42,11 +26,37 @@ const getInfo = async () => {
     .then((json) => displayInfo(json));
 };
 
+const postInfo = async (user, score) => {
+  await fetch(`${apiUrl}/:${apiId}/scores/`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      user,
+      score,
+    }),
+  })
+    .then((response) => response.json())
+    .then((json) => {
+      resultCont.innerHTML = '';
+      const result = document.createElement('p');
+      result.classList.add('add-result');
+      result.innerHTML = json.result;
+      resultCont.appendChild(result);
+      getInfo();
+    });
+};
+
+document.addEventListener('DOMContentLoaded', getInfo);
+
 refreshButton.addEventListener('click', getInfo);
 
-addButton.addEventListener('submit', (e) => {
-  const user = document.querySelector('.user').value;
-  const score = document.querySelector('.score').value;
+addButton.addEventListener('click', (e) => {
+  const user = document.querySelector('.user');
+  const score = document.querySelector('.score');
   e.preventDefault();
-  postInfo(user, score);
+  postInfo(user.value, score.value);
+  user.value = '';
+  score.value = '';
 });
