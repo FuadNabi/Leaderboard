@@ -4,17 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wbpack Exercise</title>
+  <script src="https://kit.fontawesome.com/e2597287a1.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="app-cont">
     <header>
-      <h1 class="header-title">Leaderboard</h1>
+      <h1 class="header-title"><i class="fa-solid fa-award" style="margin-right: 10px;"></i>Leader<span>Board</span><i class="fa-solid fa-award" style="margin-left: 10px;"></i></h1>
     </header>
     <main>
       <section class="scores-cont">
         <div class="scores-titles">
           <h3 class="scores-title">Recent scores</h3>
-          <button class="refresh-btn" type="submit">Refresh</button>
+          <button class="refresh-btn" type="submit"><i class="fa-solid fa-rotate"></i></button>
         </div>
         <div class="scores-table">
           <table class="table">
@@ -29,7 +30,7 @@
               <input type="text" required placeholder="Your name" class="user">
             </li>
             <li>
-              <input type="text" required placeholder="Your score" class="score">
+              <input type="number" required placeholder="Your score" class="score">
             </li>
           </ul>
           <button class="add-btn">Submit</button>

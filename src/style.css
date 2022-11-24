@@ -8,40 +8,63 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.header-title {
+  text-align: center;
+}
+
+.header-title span {
+  color: orange;
+}
+
 .scores-titles {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  margin-bottom: 20px;
 }
 
 .scores-title {
   font-size: 24px;
+  margin: 0;
 }
 
 table {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
-  border: 3px solid black;
+  border: 2px solid black;
 }
 
-table td {
+table tbody tr td {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-table tr:nth-child(even) {
-  background-color: #f2f2f2;
+table tbody tr {
+  background-color: #fff;
+  transition: 0.3s;
 }
 
-table tr:hover {
-  background-color: #ddd;
+table tbody:nth-child(even) tr {
+  background-color: rgba(255, 166, 0, 0.5);
+}
+
+table tbody tr:hover {
+  background-color: orange;
+  color: white;
+  font-weight: 600;
 }
 
 main {
   display: flex;
-  gap: 50px;
+  gap: 70px;
+  margin-top: 50px;
+}
+
+.add-title {
+  margin: 0 0 26px 0;
+  text-align: center;
 }
 
 .add-form {
@@ -60,11 +83,30 @@ main {
 }
 
 .add-form li input {
-  border: 3px solid black;
+  border: 2px solid black;
+  padding: 7px 5px;
+  border-radius: 5px;
 }
 
 .add-btn {
-  align-self: flex-end;
+  align-self: center;
+  background-color: orange;
+  font-size: 16px;
+  padding: 5px 18px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  padding: 5px 62px;
+  color: white;
+  font-weight: 600;
+}
+
+.refresh-btn {
+  background-color: orange;
+  border-radius: 12px;
+  padding: 2px 3px;
 }
 
 @keyframes change-color {
@@ -80,8 +122,9 @@ main {
 p {
   animation-name: change-color;
   animation-duration: 3s;
-  font-size: 9px;
-  font-weight: 600;
+  font-size: 17px;
+  width: 179px;
+  font-weight: 300;
   color: transparent;
   text-align: center;
 }
