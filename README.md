@@ -1,5 +1,3 @@
-
-
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -16,9 +14,7 @@
 
 # 📖 Leaderboard <a name="about-project"></a>
 
-> Leaderboard - a website that shows all scores added by different users. On this website, you can also add your score.
-
-**[your_project__name]** is a...
+> Leaderboard - a website that shows all scores added by different users. On this website, you can also add your score
 
 ## 🛠 Built With <a name="built-with"></a>
 
