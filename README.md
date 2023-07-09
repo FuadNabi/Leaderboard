@@ -55,7 +55,7 @@
 <ul>
   <li>Get a copy of the project</li>
   <li>Come into the project directory</li>
-  <li>Open the project using code editor of your choice</li>
+  <li>Open the project using the code editor of your choice</li>
   <li>Open your prefered browser</li>
 </ul>
 
