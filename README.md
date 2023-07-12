@@ -82,7 +82,7 @@
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-Contributions, issues, and feature requests are welcome!
+Contributions, [issues](https://github.com/FuadNabi/Leaderboard/issues), and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/FuadNabi/Leaderboard/issues).
 
